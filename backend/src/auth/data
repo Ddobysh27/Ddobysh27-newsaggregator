@@ -1,0 +1,15 @@
+const crypto = require("crypto")
+const { getHashPassword } = require("./utils");
+
+const defaulLogin = "admin"
+const defaultPassword = "admin"
+const passwordHash = getHashPassword(defaultPassword)
+
+const adminUser = {
+    login: defaulLogin,
+    passwordHash: passwordHash
+}
+
+module.exports = {
+    adminUser,
+}
